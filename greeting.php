@@ -2,6 +2,10 @@
 <?php
 $paragraph = $_GET['paragraph'];
 $word = $_GET['word'];
+
+
+// Sostituisci tutte le occorrenze della parola con ***
+$censoredParagraph = str_replace($word, '***', $paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +23,9 @@ $word = $_GET['word'];
     
     <h2>Lunghezza del Paragrafo:</h2>
     <p><?php echo strlen($paragraph); ?> caratteri</p>
+
+    <h2>Paragrafo censurato:</h2>
+    <p><?php echo ($censoredParagraph); ?></p>
 </body>
 
 </html>
