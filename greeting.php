@@ -2,10 +2,14 @@
 <?php
 $paragraph = $_GET['paragraph'];
 $word = $_GET['word'];
+$evident = $_GET['evident'];
 
 
 // Sostituisci tutte le occorrenze della parola con ***
 $censoredParagraph = str_replace($word, '***', $paragraph);
+
+// Evidenzia la parola nel paragrafo
+$paragraphHighlighted = str_replace($evident, '<span style="background-color: red;">'.$evident.'</span>', $paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +30,9 @@ $censoredParagraph = str_replace($word, '***', $paragraph);
 
     <h2>Paragrafo censurato:</h2>
     <p><?php echo ($censoredParagraph); ?></p>
+
+    <h2>Parola evidenziata nel paragrafo:</h2>
+    <p><?php echo ($paragraphHighlighted); ?></p>
 </body>
 
 </html>
