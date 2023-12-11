@@ -14,7 +14,11 @@ $word = $_GET['word'];
 </head>
 
 <body>
+    <h2>Paragrafo:</h2>
+    <p><?php echo ($paragraph); ?></p>
     
+    <h2>Lunghezza del Paragrafo:</h2>
+    <p><?php echo strlen($paragraph); ?> caratteri</p>
 </body>
 
 </html>
